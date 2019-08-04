@@ -56,10 +56,24 @@ const videoData = [
         ballroom: false,
         library: true
       }
-    ] 
+    ]
   }
 ];
 
 _.filter(videoData, function(suspectObj) {
   return suspectObj.present;
 });
+
+// return an array with only the names (using arrow function)
+
+const suspects = _.filter(videoData, function(suspectObj) {
+  return suspectObj.present;
+});
+
+// const suspectsName = _.map(suspects, suspect => {
+//   return suspect.name;
+// });
+
+// implicit return of the arrow function
+
+const suspectsName = _.map(suspects, suspect => suspect.name);
